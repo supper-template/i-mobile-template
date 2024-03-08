@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "es6", // 指定ECMAScript目标版本
+        "useDefineForClassFields": true, // 是否校验TypeScript数据类型
+        "module": "esnext",
+        "removeComments": true, // 是否删除注释
+        "moduleResolution": "node",
+        "strict": true, // 启用所有严格类型检查选项
+        "jsx": "preserve", // 指定JSX代码生成
+        "sourceMap": true, // 生成相应的.map文件
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "lib": ["ESNext", "DOM"], // 指定要包含在编译中的库文件
+        "skipLibCheck": true, // 跳过对声明文件的检查
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": { "@/*": ["src/*"] },
+        "types": ["node", "vite/client"],
+        "plugins": [{ "name": "typescript-plugin-css-modules" }] // 不需要写tsx则注释掉
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "types/**/*.d.ts",
+        "types/**/*.ts"
+    ],
+    "exclude": ["node_modules/**", "dist", "**/*.js"]
+}
